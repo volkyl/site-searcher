@@ -9,7 +9,6 @@ RUN apt-get update && \
     chromium-driver
 
 # Set environment variables
-ENV CHROME_BIN=/usr/bin/chromium
 ENV CHROME_DRIVER=/usr/bin/chromedriver
 
 # Add ChromeDriver to PATH
