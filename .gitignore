@@ -1,0 +1,12 @@
+# Ignore IDE-specific files
+.idea/
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore configuration files and shell scripts if they contain sensitive information
+config.ini
+
+# Ignore log files and temporary files
+*.log
+*.tmp

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <form method="post">
+        <label for="search_terms">Search Terms:</label>
+        <input type="text" id="search_terms" name="search_terms">
+        <button type="submit">Search</button>
+    </form>
+    {% if search_results %}
+        {% for website, results in search_results.items() %}
+            <h2>{{ website }}</h2>
+            <ul>
+            {% for result in results %}
+                <li><a href="{{ result.href }}" target="_blank">{{ result.title }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
